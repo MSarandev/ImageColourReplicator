@@ -1,3 +1,11 @@
+# Created by Maxim Sarandev, All Rights Reserved
+
+"""
+
+Actual working file, go figure
+
+"""
+
 from PIL import Image
 
 nm = Image.new("RGB",(1920,1080),(255,255,255))

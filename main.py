@@ -1,6 +1,18 @@
 # testing the image libraries in python
 # Maxim Sarandev || All Rights Reserved
 
+"""
+
+Initial testing file
+
+Don't use this one, instead use test.py
+Why the naming? Because, ok ..
+
+
+"""
+
+
+
 from PIL import Image
 import random
 """
