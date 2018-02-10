@@ -4,11 +4,11 @@
 from PIL import Image, ImageDraw
 
 # first source
-src_img = Image.open("img2.jpg")
+src_img = Image.open("img6.jpg")
 px_src = src_img.load()
 
 # new image
-nm = Image.new("RGB",(src_img.size[0],src_img.size[1]),(0,0,0))
+nm = Image.new("RGB",(src_img.size[0],src_img.size[1]),(255,255,255))
 px_new = nm.load()
 
 ca = 0
@@ -36,13 +36,17 @@ for x in range(src_img.size[0]):
 
             q_size = pixels[px_src[x,y]]
 
-            # draw all
-            if px_src[x,y] not in drawn:
-                draw.rectangle([(c, ca), (c, ca + src_img.size[0])], px_src[x,y])
+for key, value in pixels.items():
+    # draw all
+    if key not in drawn:
+        draw.rectangle([(c, ca), (c, ca + value*10)], key)
 
-                drawn[px_src[x,y]] = 1
+        #print key, value
 
-                c += 1
+        drawn[key] = 1
+
+        c += 1
+
 
 nm.show()
 """
